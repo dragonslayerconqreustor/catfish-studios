@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Dev/Justin/Scenes/JustinTesting.unity
+    guid: 28a10889b2f41cc4c9b547ac223ee6fa
+  - enabled: 1
+    path: Assets/Dev/Justin/Scenes/StartingMenu.unity
+    guid: 22f8bfc8fa2d9eb469895c59beda9d42
+  - enabled: 1
+    path: Assets/Dev/Justin/Scenes/JustinPlayerJoin.unity
+    guid: 9b4bcdeeb8c6c424985057004aeda5bd
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f1c360d759da83348b3c14b3a3337d7a, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
