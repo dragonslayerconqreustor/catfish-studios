@@ -416,7 +416,9 @@ MonoBehaviour:
   foregroundSpawnMode: 0
   backgroundScrollSpeed: 2
   foregroundScrollSpeed: 5
-  backgroundPrefabs: []
+  backgroundPrefabs:
+  - {fileID: 1149056452570732585, guid: 8482830caa37ba841ac32c68e08a1a96, type: 3}
+  - {fileID: 732860379226009527, guid: df5a1c8c552dce84283e5ffaaf275e8b, type: 3}
   foregroundPrefabs:
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
@@ -425,9 +427,9 @@ MonoBehaviour:
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
   backgroundSpawnInterval: 3
-  foregroundSpawnInterval: 0.8
+  foregroundSpawnInterval: 0.4
   backgroundSpawnPosition: {x: 0, y: 0, z: 10}
-  foregroundSpawnPosition: {x: 15, y: 0, z: -3}
+  foregroundSpawnPosition: {x: 10, y: 0, z: -3}
   destroyPositionX: -15
 --- !u!4 &653219341
 Transform:
@@ -477,7 +479,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -506,6 +508,75 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.5, y: 0.67, z: -2.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1753584291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753584294}
+  - component: {fileID: 1753584293}
+  - component: {fileID: 1753584292}
+  m_Layer: 0
+  m_Name: push barrier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1753584292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753584291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d79388cd6c3ecf46b2c0e4685fba8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpeedBoostTrigger
+  backgroundSpeedMultiplier: 2
+  foregroundSpeedMultiplier: 2
+  scrollingManager: {fileID: 653219340}
+--- !u!65 &1753584293
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753584291}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 15.777362, z: 11.475824}
+  m_Center: {x: 0, y: 7.388681, z: -0.9072199}
+--- !u!4 &1753584294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753584291}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.4, y: 0.67, z: -2.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1287,3 +1358,4 @@ SceneRoots:
   - {fileID: 4997138866955894517}
   - {fileID: 1137358711177588076}
   - {fileID: 1010534596}
+  - {fileID: 1753584294}
