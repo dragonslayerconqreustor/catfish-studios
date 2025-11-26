@@ -17,14 +17,13 @@ public class HorizontalMovement : MonoBehaviour
     private Vector3 accel = new Vector3(0, 0, 0);
     Coroutine accelleratorTracker;
     [SerializeField] private float brakingPower;
-    private float regularDampening;
     private bool handbrakeInitiated = false;
 
 
-    [Header("Side Scrolling")]
+    /*[Header("Side Scrolling")]
     [SerializeField] private SideScrollingManager scrollingManager;
     [SerializeField] private Rigidbody playerRigidbody;
-    [SerializeField] private float idleThreshold = 0.1f;
+    [SerializeField] private float idleThreshold = 0.1f;*/
 
     void Start()
     {
@@ -32,10 +31,8 @@ public class HorizontalMovement : MonoBehaviour
         actionHandbrake = input.actions.FindAction("Stop");
         readDelayTime = new WaitForSecondsRealtime(readDelay);
         accelleratorTracker = StartCoroutine(Accelleration());
-        regularDampening = WheelsRb[0].angularDamping;
-
     
-        if (scrollingManager == null)
+        /*if (scrollingManager == null)
         {
             scrollingManager = FindObjectOfType<SideScrollingManager>();
         }
@@ -44,17 +41,12 @@ public class HorizontalMovement : MonoBehaviour
         if (playerRigidbody == null)
         {
             playerRigidbody = GetComponent<Rigidbody>();
-        }
+        }*/
     }
 
     void FixedUpdate()
     {
-        /*
-        Vector3 temp = new Vector3(0, 0, -speed * actionAccelleration.ReadValue<float>());
-        */
-
-     
-            float inputValue = actionAccelleration.ReadValue<float>();
+            /*float inputValue = actionAccelleration.ReadValue<float>();
 
        
             bool isIdle = Mathf.Abs(inputValue) < idleThreshold && !handbrakeInitiated;
@@ -65,7 +57,7 @@ public class HorizontalMovement : MonoBehaviour
                 float scrollSpeed = scrollingManager.foregroundScrollSpeed;
                 playerRigidbody.linearVelocity = new Vector3(-scrollSpeed, playerRigidbody.linearVelocity.y, playerRigidbody.linearVelocity.z);
             }
-
+            */
             if (handbrakeInitiated)
             {
                 foreach (Rigidbody rb in WheelsRb)

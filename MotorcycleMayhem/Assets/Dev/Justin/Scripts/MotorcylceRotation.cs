@@ -22,7 +22,7 @@ public class MotorcylceRotation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!Physics.Raycast(transform.position, new Vector3(0, -1, 0), 1.1f))
+        if (!Physics.Raycast(transform.position, new Vector3(0, -1, 0), 0.75f))
         {
             rb.AddTorque(rotationAccelVector, ForceMode.Acceleration);
         }

@@ -10,7 +10,7 @@ public class MultiplayerJoin : MonoBehaviour
     public int maxPlayers = 4;
 
     private PlayerInputManager inputManager;
-    [SerializeField] private List<PlayerInput> activePlayers = new List<PlayerInput>();
+    public List<PlayerInput> activePlayers = new List<PlayerInput>();
 
     void Awake()
     {
