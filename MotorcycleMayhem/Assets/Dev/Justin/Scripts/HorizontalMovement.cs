@@ -38,6 +38,11 @@ public class HorizontalMovement : MonoBehaviour
             tr = tr.parent;
         }
         DontDestroyOnLoad(tr);
+
+        foreach (Rigidbody wheel in WheelsRb)
+        {
+            wheel.transform.position = transform.position;
+        }
     
         /*if (scrollingManager == null)
         {
