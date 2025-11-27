@@ -1,20 +1,31 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(Rigidbody))]
 public class ScrollableElement : MonoBehaviour
 {
+    private Rigidbody rb;
+    private Vector3 trueSpeed;
     private float scrollSpeed;
     private bool isBackground;
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.mass = Mathf.Pow(10, 9);
+        rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+        rb.useGravity = false;
+    }
+
     public void Initialize(float speed, bool background)
     {
-        scrollSpeed = speed;
+        trueSpeed = new Vector3(-speed, 0, 0);
         isBackground = background;
     }
 
     void Update()
     {
-        transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
+        rb.linearVelocity = trueSpeed;
     }
 
     public bool IsBackground()
@@ -24,12 +35,12 @@ public class ScrollableElement : MonoBehaviour
 
     public void SetScrollSpeed(float newSpeed)
     {
-        scrollSpeed = newSpeed;
+        trueSpeed = new Vector3(-newSpeed, 0, 0);
     }
 
     public float GetScrollSpeed()
     {
-        return scrollSpeed;
+        return trueSpeed.x;
     }
 
 

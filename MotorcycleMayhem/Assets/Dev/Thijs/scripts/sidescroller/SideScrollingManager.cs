@@ -1,6 +1,8 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+
 public enum SpawnMode
 {
     InOrder,
@@ -21,8 +23,10 @@ public class SideScrollingManager : MonoBehaviour
     [SerializeField] private GameObject[] foregroundPrefabs;
 
     [Header("Spawn Settings")]
-    [SerializeField] private float backgroundSpawnInterval = 3f;
-    [SerializeField] private float foregroundSpawnInterval = 2f;
+    [SerializeField, Min(0)] private float SizeOfBackgroundPrefabs;
+    [SerializeField, Min(0)] private float SizeOfForegroundPrefabs;
+    [SerializeField, SerializeAs("Deprecated")] private float backgroundSpawnInterval;
+    [SerializeField, SerializeAs("Deprecated")] private float foregroundSpawnInterval;
     [SerializeField] private Vector3 backgroundSpawnPosition = new Vector3(15f, 0f, 10f);
     [SerializeField] private Vector3 foregroundSpawnPosition = new Vector3(15f, 0f, 0f);
     [SerializeField] private float destroyPositionX = -15f;
@@ -42,6 +46,9 @@ public class SideScrollingManager : MonoBehaviour
     {
         currentBackgroundSpeed = backgroundScrollSpeed;
         currentForegroundSpeed = foregroundScrollSpeed;
+
+        backgroundSpawnInterval = SizeOfBackgroundPrefabs / currentBackgroundSpeed;
+        foregroundSpawnInterval = SizeOfForegroundPrefabs / currentForegroundSpeed;
 
 
         if (backgroundPrefabs.Length > 0)
