@@ -534,7 +534,7 @@ MonoBehaviour:
   foregroundPrefabs:
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
-  - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
+  - {fileID: 47992002718326679, guid: 498c69efc4ea82746a976a521dee9968, type: 3}
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
   - {fileID: 5661805596555171086, guid: d485ff96b6865324e86e60e6d1a9b7ae, type: 3}
