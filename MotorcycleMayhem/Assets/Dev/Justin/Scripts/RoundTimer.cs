@@ -1,26 +1,29 @@
 using System;
 using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-public class RoundTimer : MonoBehaviour
+public class RoundTimer : Util
 {
-    
-    [SerializeField, Tooltip("This doesn't actually do anything in the code it's for usability")] private string label;
-    [Serializable] public class TimerEndsEvent : UnityEvent { }
+    [SerializeField, Tooltip("This doesn't actually do anything in the code it's for usability"), TextArea] private string label;
     [SerializeField] private TimerEndsEvent onTimerEnd = new TimerEndsEvent();
 
     [SerializeField, Min(0), Tooltip("The time the timer counts down from in seconds")] private float timerLength;
     private float timer;
+    public float timerSpeed = 1f;
     public int displayTime;
+    
     private bool timerGoing = false;
     private bool timerPaused = false;
     private bool isTemporary = false;
 
-    public RoundTimer(float timerLength)
+    public RoundTimer(float timerLength, float timerSpeed, TimerEndsEvent onTimerEnd)
     {
         this.timerLength = timerLength;
+        this.timerSpeed = timerSpeed;
+        this.onTimerEnd = onTimerEnd;
         isTemporary = true;
     }
     public void StartTimer()
@@ -58,7 +61,7 @@ public class RoundTimer : MonoBehaviour
                 timerGoing = false;
                 TimerEnd();
             }
-            timer -= Time.deltaTime;
+            timer -= Time.deltaTime * timerSpeed;
             displayTime = Mathf.RoundToInt(timer - 0.5f);
             if (displayTime < 0)
             {

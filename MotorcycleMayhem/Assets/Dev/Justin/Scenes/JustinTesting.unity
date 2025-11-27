@@ -202,9 +202,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2139513974}
-        m_TargetAssemblyTypeName: RoundTimer, Assembly-CSharp
-        m_MethodName: StartTimer
+      - m_Target: {fileID: 2139513975}
+        m_TargetAssemblyTypeName: RoundManager, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -390,6 +390,131 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415528863}
   m_CullTransparentMesh: 1
+--- !u!1 &510572712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 510572717}
+  - component: {fileID: 510572716}
+  - component: {fileID: 510572715}
+  - component: {fileID: 510572714}
+  - component: {fileID: 510572713}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &510572713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510572712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f43e8cd98ccf84cac3f388bf8a514f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathBarrier
+  YoureGonnaDie: []
+--- !u!65 &510572714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510572712}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &510572715
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510572712}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &510572716
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510572712}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &510572717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510572712}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.56, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 23.047, z: 10.156}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &598162491
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +969,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 9.29
   m_Depth: 0
   m_CullingMask:
@@ -870,7 +995,7 @@ Transform:
   m_GameObject: {fileID: 1435352815}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.88, y: 4.81, z: -28.75}
+  m_LocalPosition: {x: 12.96, y: 10.8, z: -28.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1098,92 +1223,23 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2139513971}
-  - component: {fileID: 2139513970}
-  - component: {fileID: 2139513969}
   - component: {fileID: 2139513972}
   - component: {fileID: 2139513974}
   - component: {fileID: 2139513973}
+  - component: {fileID: 2139513975}
+  - component: {fileID: 2139513979}
+  - component: {fileID: 2139513978}
+  - component: {fileID: 2139513977}
+  - component: {fileID: 2139513976}
+  - component: {fileID: 2139513980}
+  - component: {fileID: 2139513981}
   m_Layer: 0
-  m_Name: PlayerMan
+  m_Name: SceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2139513969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139513968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
-  m_NotificationBehavior: 2
-  m_MaxPlayerCount: 4
-  m_AllowJoining: 1
-  m_JoinBehavior: 0
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2139513968}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 129d60b9-edb9-49dd-90a0-bf38066104cf
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 6419306627342528881, guid: 26f7bbdbfef3b904c9b6f138ed741491, type: 3}
-  m_SplitScreen: 0
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: -1
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!114 &2139513970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139513968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8d46907e347b45be1138568da732b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MultiplayerJoin
-  playerPrefab: {fileID: 1646870212596134106, guid: 47f6db6a358f3cd42b51114468ad7163, type: 3}
-  spawnPoints:
-  - {fileID: 915245449}
-  maxPlayers: 4
-  respawnScript: {fileID: 2139513972}
-  activePlayers: []
 --- !u!4 &2139513971
 Transform:
   m_ObjectHideFlags: 0
@@ -1193,7 +1249,7 @@ Transform:
   m_GameObject: {fileID: 2139513968}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.16845, y: 0, z: 8.36644}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1211,11 +1267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97aeeebfce3b0e2498999605eab5cbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RespawnPlayers
-  respawnLocations:
-  - {fileID: 915245449}
   respawnPointDistanceFromGround: 1
-  contraints: 0
   players: []
+  multiplayerScript: {fileID: 0}
 --- !u!114 &2139513973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d024eaf381125994988fcd18481a0cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoundTimer
+  label: DebugTimer
   onTimerEnd:
     m_PersistentCalls:
       m_Calls:
@@ -1258,7 +1313,327 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timerLength: 5
+  timerSpeed: 1
   displayTime: 0
+--- !u!114 &2139513975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139513968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2b582ad84aebc419673eeebba19921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoundManager
+  OnRoundStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2139513972}
+        m_TargetAssemblyTypeName: RespawnPlayers, Assembly-CSharp
+        m_MethodName: FinishRespawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513973}
+        m_TargetAssemblyTypeName: PositionDetection, Assembly-CSharp
+        m_MethodName: ResetPlacements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513976}
+        m_TargetAssemblyTypeName: RoundTimer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnGameStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2139513972}
+        m_TargetAssemblyTypeName: RespawnPlayers, Assembly-CSharp
+        m_MethodName: StartRespawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513978}
+        m_TargetAssemblyTypeName: RoundTimer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRoundEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2139513973}
+        m_TargetAssemblyTypeName: PositionDetection, Assembly-CSharp
+        m_MethodName: DecidePlacementsFromPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513979}
+        m_TargetAssemblyTypeName: Points, Assembly-CSharp
+        m_MethodName: DistrubtePointsFromPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513979}
+        m_TargetAssemblyTypeName: Points, Assembly-CSharp
+        m_MethodName: ShowLeaderboard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513978}
+        m_TargetAssemblyTypeName: RoundTimer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513977}
+        m_TargetAssemblyTypeName: RoundTimer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513972}
+        m_TargetAssemblyTypeName: RespawnPlayers, Assembly-CSharp
+        m_MethodName: StartRespawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139513976}
+        m_TargetAssemblyTypeName: RoundTimer, Assembly-CSharp
+        m_MethodName: StopTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnGameEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2139513973}
+        m_TargetAssemblyTypeName: PositionDetection, Assembly-CSharp
+        m_MethodName: DecidePlacementsFromPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  amountOfRounds: 3
+--- !u!114 &2139513976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139513968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d024eaf381125994988fcd18481a0cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoundTimer
+  label: RoundTimer
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2139513975}
+        m_TargetAssemblyTypeName: RoundManager, Assembly-CSharp
+        m_MethodName: EndRound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  timerLength: 300
+  timerSpeed: 1
+  displayTime: 0
+--- !u!114 &2139513977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139513968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d024eaf381125994988fcd18481a0cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoundTimer
+  label: Time scoreboard is onscreen between rounds
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2139513979}
+        m_TargetAssemblyTypeName: Points, Assembly-CSharp
+        m_MethodName: HideLeaderboard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  timerLength: 3
+  timerSpeed: 1
+  displayTime: 0
+--- !u!114 &2139513978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139513968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d024eaf381125994988fcd18481a0cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoundTimer
+  label: Time between rounds
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2139513975}
+        m_TargetAssemblyTypeName: RoundManager, Assembly-CSharp
+        m_MethodName: StartRound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  timerLength: 3
+  timerSpeed: 1
+  displayTime: 0
+--- !u!114 &2139513979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139513968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42901d024241c6143a918fa55d0db18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Points
+  positionScript: {fileID: 2139513973}
+  multiplayerScript: {fileID: 0}
+  pointDistrubition: ffffffffffffffffffffffffffffffff
+  positionValues: 3200000023000000190000000f000000
+  leaderboardText: []
+  leaderboard: {fileID: 0}
+--- !u!114 &2139513980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139513968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d83758f0c76d0d45a611f14dfe0f69c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoints
+  spawnPoints:
+  - {fileID: 915245449}
+--- !u!114 &2139513981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139513968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608e4abf5cb9d4488b628234b0ce396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReloadGameManagerOnSceneEnter
+  CanJoinInScene: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1271,3 +1646,4 @@ SceneRoots:
   - {fileID: 1435352819}
   - {fileID: 1695819783}
   - {fileID: 1121974992}
+  - {fileID: 510572717}

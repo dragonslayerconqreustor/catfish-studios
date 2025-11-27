@@ -325,6 +325,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &629724604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 629724606}
+  - component: {fileID: 629724605}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &629724605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629724604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608e4abf5cb9d4488b628234b0ce396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReloadGameManagerOnSceneEnter
+  CanJoinInScene: 1
+--- !u!4 &629724606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629724604}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.65, y: 9.97741, z: -8.12354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638063191
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +677,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 6419306627342528881, guid: 26f7bbdbfef3b904c9b6f138ed741491, type: 3}
+  m_PlayerPrefab: {fileID: 1646870212596134106, guid: 47f6db6a358f3cd42b51114468ad7163, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -654,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da8d46907e347b45be1138568da732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MultiplayerJoin
-  playerPrefab: {fileID: 6419306627342528881, guid: a6d1296c96e97d84ea58135ae362b2f8, type: 3}
+  playerPrefab: {fileID: 1646870212596134106, guid: 47f6db6a358f3cd42b51114468ad7163, type: 3}
   spawnPoints:
   - {fileID: 1137358711177588076}
   - {fileID: 4997138866955894517}
@@ -1357,3 +1402,4 @@ SceneRoots:
   - {fileID: 1137358711177588076}
   - {fileID: 1010534596}
   - {fileID: 598690624}
+  - {fileID: 629724606}

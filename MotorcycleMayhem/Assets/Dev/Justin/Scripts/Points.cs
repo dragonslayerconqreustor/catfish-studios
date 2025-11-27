@@ -22,7 +22,8 @@ public class Points : MonoBehaviour
         15
     };
 
-    public TextMeshPro[] leaderboardText;
+    [SerializeField] private TextMeshPro[] leaderboardText;
+    [SerializeField] private GameObject leaderboard;
 
     void Start()
     {
@@ -51,7 +52,7 @@ public class Points : MonoBehaviour
             pointDistrubition[i] = 0;
         }
 
-        for (int i = pointDistrubition.Length - 1; pointDistrubition[i] == -1; i--)
+        for (int i = pointDistrubition.Length - 1; pointDistrubition[i] == -1 && i < leaderboardText.Length; i--)
         {
             leaderboardText[i].gameObject.SetActive(false);
         }
@@ -65,11 +66,22 @@ public class Points : MonoBehaviour
         }
     }
 
-    public void UpdateLeaderboard()
+    private void UpdateLeaderboard()
     {
         for (int i = 0; pointDistrubition[i] != -1; i++)
         {
             leaderboardText[i].text = ("player " + (i + 1) + ":" + pointDistrubition[i].ToString() + "Points");
         }
+    }
+
+    public void ShowLeaderboard()
+    {
+        UpdateLeaderboard();
+        leaderboard.SetActive(true);
+    }
+
+    public void HideLeaderboard()
+    {
+        leaderboard.SetActive(false);
     }
 }

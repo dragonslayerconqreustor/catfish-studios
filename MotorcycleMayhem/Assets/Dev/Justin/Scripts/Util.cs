@@ -1,9 +1,13 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Util : MonoBehaviour
 {
+    [Serializable] public class TimerEndsEvent : UnityEvent { }
+
     public List<int> FindObjectsNotInList(int[] testList, int[] referenceList)
     {
         List<int> resultsList = new List<int>();

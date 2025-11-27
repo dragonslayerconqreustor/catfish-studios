@@ -5,9 +5,8 @@ using UnityEngine.InputSystem;
 
 public class RespawnPlayers : MonoBehaviour
 {
-    [SerializeField] private Transform[] respawnLocations;
+    private Transform[] respawnLocations;
     [SerializeField] private float respawnPointDistanceFromGround;
-    [SerializeField] private RigidbodyConstraints contraints;
     public List<GameObject> players = new List<GameObject>();
     private List<Rigidbody> playerRbs = new List<Rigidbody>();
     [SerializeField] private MultiplayerJoin multiplayerScript;
@@ -25,9 +24,12 @@ public class RespawnPlayers : MonoBehaviour
             }
         }
 
+        respawnLocations = FindFirstObjectByType<SpawnPoints>().spawnPoints;
+
         foreach (PlayerInput player in multiplayerScript.activePlayers)
         {
             playerRbs.Add(player.gameObject.GetComponent<Rigidbody>());
+            players.Add(player.gameObject);
         }
     }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using System;
 
 public class MultiplayerJoin : MonoBehaviour
 {
@@ -14,12 +15,14 @@ public class MultiplayerJoin : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(this);
         inputManager = GetComponent<PlayerInputManager>();
         inputManager.playerPrefab = playerPrefab;
         inputManager.joinBehavior = PlayerJoinBehavior.JoinPlayersWhenButtonIsPressed;
 
         inputManager.playerJoinedEvent.AddListener(OnPlayerJoined);
         inputManager.playerLeftEvent.AddListener(OnPlayerLeft);
+        Reload();
     }
 
     void OnDestroy()
@@ -54,5 +57,29 @@ public class MultiplayerJoin : MonoBehaviour
     {
         activePlayers.Remove(playerInput);
         Debug.Log("Player left. Remaining: " + activePlayers.Count);
+    }
+
+    public void Reload(bool enableJoining = false)
+    {
+        try
+        {
+            spawnPoints = FindFirstObjectByType<SpawnPoints>().spawnPoints;
+            if (spawnPoints.Length == 0 || spawnPoints == null)
+            {
+                Debug.LogWarning("Scene has no Spawnpoints");
+            }
+        }
+        catch (Exception e)
+        { 
+            Debug.LogWarning(e + "Scene has no Spawnpoints");
+        }
+        if (enableJoining)
+            inputManager.EnableJoining();
+        else
+            inputManager.DisableJoining();
+        foreach (var player in activePlayers)
+        {
+            player.gameObject.GetComponent<PlayerDeathSettings>().Reload();
+        }
     }
 }

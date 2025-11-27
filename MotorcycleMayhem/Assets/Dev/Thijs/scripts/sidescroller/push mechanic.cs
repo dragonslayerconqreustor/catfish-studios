@@ -18,7 +18,7 @@ public class SpeedBoostTrigger : MonoBehaviour
 
         if (scrollingManager == null)
         {
-            scrollingManager = FindObjectOfType<SideScrollingManager>();
+            scrollingManager = FindFirstObjectByType<SideScrollingManager>();
         }
 
         BoxCollider boxCollider = GetComponent<BoxCollider>();

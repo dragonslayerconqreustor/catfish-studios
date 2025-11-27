@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -31,6 +32,12 @@ public class HorizontalMovement : MonoBehaviour
         actionHandbrake = input.actions.FindAction("Stop");
         readDelayTime = new WaitForSecondsRealtime(readDelay);
         accelleratorTracker = StartCoroutine(Accelleration());
+        Transform tr = transform;
+        while (tr.parent != null)
+        {
+            tr = tr.parent;
+        }
+        DontDestroyOnLoad(tr);
     
         /*if (scrollingManager == null)
         {

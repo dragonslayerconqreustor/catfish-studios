@@ -29,14 +29,14 @@ public class DeathBarrier : MonoBehaviour
 
             if (deathSettings != null)
             {
-           
-                deathSettings.SaveCurrentSettings();
+                deathSettings.OnDeath();
             }
 
          
             YouDied.Add(playerObj);
 
-            playerObj.SetActive(false);
+            playerObj.transform.position += new Vector3(0, -1000, 0);
+            playerObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
             Debug.Log($"Player {playerObj.name} disabled and added to array. Total disabled: {YouDied.Count}");
         }

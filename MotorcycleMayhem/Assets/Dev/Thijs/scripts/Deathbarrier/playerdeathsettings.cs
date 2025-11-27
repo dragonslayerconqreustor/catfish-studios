@@ -1,5 +1,7 @@
 
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerDeathSettings : MonoBehaviour
 {
@@ -8,11 +10,19 @@ public class PlayerDeathSettings : MonoBehaviour
 
     private Vector3 savedPosition;
     private Quaternion savedRotation;
+    private PositionDetection positionScript;
+    private PlayerInput playerInput;
 
+    public void Reload()
+    {
+        positionScript = FindAnyObjectByType<PositionDetection>();
+        playerInput = GetComponent<PlayerInput>();
+    }
 
     public void OnDeath()
     {
         isAlive = false;
+        positionScript.DecidePlacement(playerInput);
         Debug.Log($"{gameObject.name} died. Settings saved.");
 
     }
