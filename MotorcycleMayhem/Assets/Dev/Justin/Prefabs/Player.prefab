@@ -122,6 +122,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 635547659545568360, guid: 9436aa13b369d2d41891bfee1d9f6eb9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2840693938749298447}
+    - targetCorrespondingSourceObject: {fileID: 635547659545568360, guid: 9436aa13b369d2d41891bfee1d9f6eb9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4244863881928855546}
     - targetCorrespondingSourceObject: {fileID: 2516609131796833829, guid: 9436aa13b369d2d41891bfee1d9f6eb9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8251154135516450508}
@@ -533,6 +536,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeathSettings
   isAlive: 1
+--- !u!114 &4244863881928855546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353992841834047971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf82f6c355bce8419ff3227cf66cfb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AssignTexture
+  materials:
+  - {fileID: 2100000, guid: 3de042d0865c6f144bda6302e337fdb8, type: 2}
+  - {fileID: 2100000, guid: 74e97ddbd909ba040b38f97279477025, type: 2}
+  - {fileID: 2100000, guid: 6e2db187bb0fc6348bb46d1c859a1f87, type: 2}
+  - {fileID: 2100000, guid: 1cb62d0ed1ca5664fb41af191fb1b5c2, type: 2}
 --- !u!1 &4104882357905583022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2516609131796833829, guid: 9436aa13b369d2d41891bfee1d9f6eb9, type: 3}
