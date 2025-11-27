@@ -39,7 +39,6 @@ public class MultiplayerJoin : MonoBehaviour
             Destroy(playerInput.gameObject);
             return;
         }
-        Debug.Break();
         activePlayers.Add(playerInput);
 
         int playerIndex = activePlayers.Count - 1;
