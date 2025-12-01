@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class HorizontalMovement : MonoBehaviour
 {
     [SerializeField] private PlayerInput input;
+    [SerializeField] private Rigidbody playerRb;
     private InputAction actionAccelleration;
     private InputAction actionHandbrake;
     [SerializeField] private Rigidbody[] WheelsRb;
@@ -32,6 +33,7 @@ public class HorizontalMovement : MonoBehaviour
         actionHandbrake = input.actions.FindAction("Stop");
         readDelayTime = new WaitForSecondsRealtime(readDelay);
         accelleratorTracker = StartCoroutine(Accelleration());
+        playerRb = GetComponent<Rigidbody>();
         Transform tr = transform;
         while (tr.parent != null)
         {
@@ -43,33 +45,10 @@ public class HorizontalMovement : MonoBehaviour
         {
             wheel.transform.position = transform.position;
         }
-    
-        /*if (scrollingManager == null)
-        {
-            scrollingManager = FindObjectOfType<SideScrollingManager>();
-        }
-
-      
-        if (playerRigidbody == null)
-        {
-            playerRigidbody = GetComponent<Rigidbody>();
-        }*/
     }
 
     void FixedUpdate()
     {
-            /*float inputValue = actionAccelleration.ReadValue<float>();
-
-       
-            bool isIdle = Mathf.Abs(inputValue) < idleThreshold && !handbrakeInitiated;
-
-            if (isIdle && scrollingManager != null && playerRigidbody != null)
-            {
-          
-                float scrollSpeed = scrollingManager.foregroundScrollSpeed;
-                playerRigidbody.linearVelocity = new Vector3(-scrollSpeed, playerRigidbody.linearVelocity.y, playerRigidbody.linearVelocity.z);
-            }
-            */
             if (handbrakeInitiated)
             {
                 foreach (Rigidbody rb in WheelsRb)
@@ -82,9 +61,7 @@ public class HorizontalMovement : MonoBehaviour
             {
                 foreach (Rigidbody rb in WheelsRb)
                 {
-                    if (Mathf.Abs((WheelsRb[0].angularVelocity.z + WheelsRb[1].angularVelocity.z) / 2) < maxSpeedForFastAcceleration ||
-                        actionAccelleration.ReadValue<float>() > 0 && (WheelsRb[0].angularVelocity.z + WheelsRb[1].angularVelocity.z) / 2 > 0 ||
-                        actionAccelleration.ReadValue<float>() < 0 && (WheelsRb[0].angularVelocity.z + WheelsRb[1].angularVelocity.z) / 2 < 0)
+                    if (Mathf.Abs(playerRb.linearVelocity.x + playerRb.linearVelocity.z) < maxSpeedForFastAcceleration)
                     {
                         rb.AddTorque(accel * fastAcceleration, ForceMode.Acceleration);
                     }

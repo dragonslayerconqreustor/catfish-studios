@@ -1,75 +1,49 @@
+using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider))]
 public class SpeedBoostTrigger : MonoBehaviour
 {
     [Header("Speed Boost Settings")]
-    [SerializeField] private float backgroundSpeedMultiplier = 2f;
-    [SerializeField] private float foregroundSpeedMultiplier = 2f;
+    [SerializeField] private float addSpeed = 1f;
 
-    [Header("References")]
-    [SerializeField] private SideScrollingManager scrollingManager;
+    [SerializeField] private CameraController controller;
 
-    private float originalBackgroundSpeed;
-    private float originalForegroundSpeed;
-    private bool isSpeedBoosted = false;
+    private bool hasBoostedThisFrame = false;
 
     void Start()
     {
-
-        if (scrollingManager == null)
+        if (controller == null)
         {
-            scrollingManager = FindFirstObjectByType<SideScrollingManager>();
+            controller = FindAnyObjectByType<CameraController>();
+            if (controller == null)
+            {
+                Debug.LogError("Scene has no CameraController");
+                Destroy(this); return;
+            }
         }
-
         BoxCollider boxCollider = GetComponent<BoxCollider>();
-        if (boxCollider == null)
-        {
-            boxCollider = gameObject.AddComponent<BoxCollider>();
-        }
         boxCollider.isTrigger = true;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-
-        if (other.CompareTag("Player") && !isSpeedBoosted)
+        if (other.CompareTag("Player") && !hasBoostedThisFrame)
         {
             ActivateSpeedBoost();
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-     
-        if (other.CompareTag("Player") && isSpeedBoosted)
-        {
-            DeactivateSpeedBoost();
-        }
-    }
-
     private void ActivateSpeedBoost()
     {
-        if (scrollingManager == null) return;
-
-        originalBackgroundSpeed = scrollingManager.backgroundScrollSpeed;
-        originalForegroundSpeed = scrollingManager.foregroundScrollSpeed;
-
-        scrollingManager.backgroundScrollSpeed *= backgroundSpeedMultiplier;
-        scrollingManager.foregroundScrollSpeed *= foregroundSpeedMultiplier;
-
-        isSpeedBoosted = true;
-        Debug.Log("Speed Boost Activated!");
+        controller.UpdateDollySpeed(addSpeed * Time.deltaTime, true);
+        hasBoostedThisFrame = true;
+        StartCoroutine(DontBoostMoreThanOncePerFrame());
     }
 
-    private void DeactivateSpeedBoost()
+    private IEnumerator DontBoostMoreThanOncePerFrame()
     {
-        if (scrollingManager == null) return;
-
-
-        scrollingManager.backgroundScrollSpeed = originalBackgroundSpeed;
-        scrollingManager.foregroundScrollSpeed = originalForegroundSpeed;
-
-        isSpeedBoosted = false;
-        Debug.Log("Speed Boost Deactivated!");
+        yield return new WaitForEndOfFrame();
+        hasBoostedThisFrame = false;
     }
 }

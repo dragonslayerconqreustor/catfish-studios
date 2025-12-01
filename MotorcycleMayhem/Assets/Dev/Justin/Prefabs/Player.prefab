@@ -203,12 +203,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HorizontalMovement
   input: {fileID: 3119602294106389058}
+  playerRb: {fileID: 0}
   WheelsRb:
   - {fileID: 6345973252200596906}
   - {fileID: 5803468433953715278}
-  fastAcceleration: 10000
+  fastAcceleration: 100000
   slowAcceleration: 30
-  maxSpeedForFastAcceleration: 30
+  maxSpeedForFastAcceleration: Infinity
   readDelay: 0.1
   brakingPower: 0
 --- !u!114 &3119602294106389058
