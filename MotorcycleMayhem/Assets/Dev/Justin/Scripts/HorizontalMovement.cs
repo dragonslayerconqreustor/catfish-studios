@@ -61,7 +61,8 @@ public class HorizontalMovement : MonoBehaviour
             {
                 foreach (Rigidbody rb in WheelsRb)
                 {
-                    if (Mathf.Abs(playerRb.linearVelocity.x + playerRb.linearVelocity.z) < maxSpeedForFastAcceleration)
+                    if (Mathf.Abs(WheelsRb[0].angularVelocity.x + WheelsRb[0].angularVelocity.y + WheelsRb[0].angularVelocity.z) < maxSpeedForFastAcceleration ||
+                        Mathf.Abs(WheelsRb[1].angularVelocity.x + WheelsRb[1].angularVelocity.y + WheelsRb[1].angularVelocity.z) < maxSpeedForFastAcceleration)
                     {
                         rb.AddTorque(accel * fastAcceleration, ForceMode.Acceleration);
                     }

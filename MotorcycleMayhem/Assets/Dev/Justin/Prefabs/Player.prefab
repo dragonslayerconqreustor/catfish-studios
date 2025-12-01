@@ -209,7 +209,7 @@ MonoBehaviour:
   - {fileID: 5803468433953715278}
   fastAcceleration: 100000
   slowAcceleration: 30
-  maxSpeedForFastAcceleration: Infinity
+  maxSpeedForFastAcceleration: 200
   readDelay: 0.1
   brakingPower: 0
 --- !u!114 &3119602294106389058
