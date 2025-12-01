@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem.Android;
 
 public class Util : MonoBehaviour
 {
@@ -123,5 +124,18 @@ public class Util : MonoBehaviour
             }
         }
         return sortedList;
+    }
+
+    public int CountAmountInList(List<bool> list, bool countFor = true)
+    {
+        int counter = 0;
+        for (int i = 0; i < list.Count; i++)
+        {
+            if (list[i] == countFor)
+            {
+                counter++;
+            }
+        }
+        return counter;
     }
 }

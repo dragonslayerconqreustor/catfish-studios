@@ -1699,7 +1699,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnOnePlayerLeft:
+    m_PersistentCalls:
+      m_Calls: []
   amountOfRounds: 3
+  playersAlive: 
 --- !u!114 &2139513976
 MonoBehaviour:
   m_ObjectHideFlags: 0

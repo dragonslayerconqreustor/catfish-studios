@@ -21,12 +21,6 @@ public class HorizontalMovement : MonoBehaviour
     [SerializeField] private float brakingPower;
     private bool handbrakeInitiated = false;
 
-
-    /*[Header("Side Scrolling")]
-    [SerializeField] private SideScrollingManager scrollingManager;
-    [SerializeField] private Rigidbody playerRigidbody;
-    [SerializeField] private float idleThreshold = 0.1f;*/
-
     void Start()
     {
         actionAccelleration = input.actions.FindAction("Accelleration");
@@ -70,6 +64,8 @@ public class HorizontalMovement : MonoBehaviour
                     {
                         rb.AddTorque(accel * slowAcceleration, ForceMode.Acceleration);
                     }
+                print(((WheelsRb[1].angularVelocity.x + WheelsRb[1].angularVelocity.y + WheelsRb[1].angularVelocity.z) + (WheelsRb[0].angularVelocity.x + WheelsRb[0].angularVelocity.y + WheelsRb[0].angularVelocity.z)) / 2);
+                print(playerRb.linearVelocity.x + playerRb.linearVelocity.z);
                 }
             }
         }
