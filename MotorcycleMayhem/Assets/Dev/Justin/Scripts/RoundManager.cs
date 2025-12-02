@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RoundManager : MonoBehaviour
+public class RoundManager : Util
 {
     // Event serializations
     [Serializable] public class RoundStartEvent : UnityEvent { }
@@ -18,14 +18,25 @@ public class RoundManager : MonoBehaviour
     [Serializable] public class GameEndEvent : UnityEvent { }
     [SerializeField] private GameEndEvent OnGameEnd = new GameEndEvent();
 
+    [Serializable] public class PointlessGameRoundEvent : UnityEvent { }
+    [SerializeField] private PointlessGameRoundEvent OnPointlessRoundEnd = new PointlessGameRoundEvent();
+
+    [Serializable] public class OnePlayerEvent : UnityEvent { }
+    [SerializeField] private OnePlayerEvent OnOnePlayerLeft = new OnePlayerEvent();
+
     // Variable serializations
     [Range(3, 15)] public int amountOfRounds;
     private MultiplayerJoin multiplayerScript;
     private List<GameObject> players = new List<GameObject>();
+    [HideInInspector] public List<bool> playersAlive = new List<bool>();
     private int CurrentRound = 0;
 
     public void Start()
     {
+        for (int i = 0; i < players.Count; i++)
+        {
+            playersAlive.Add(true);
+        }
         multiplayerScript = FindAnyObjectByType<MultiplayerJoin>();
         if (multiplayerScript == null )
         {
@@ -38,6 +49,10 @@ public class RoundManager : MonoBehaviour
     public void StartRound()
     {
         CurrentRound++;
+        for (int i = 0;i < playersAlive.Count; i++)
+        {
+            playersAlive[i] = true;
+        }
         OnRoundStart.Invoke();
     }
 
@@ -61,5 +76,27 @@ public class RoundManager : MonoBehaviour
     public void EndGame()
     {
         OnGameEnd.Invoke();
+    }
+
+    public void PointlessEndRound()
+    {
+        OnPointlessRoundEnd.Invoke();
+    }
+
+    private void WhenOnePlayerLeft()
+    {
+        OnOnePlayerLeft.Invoke();
+    }
+
+    private void Update()
+    {
+        if (CountAmountInList(playersAlive, true) == 1)
+        {
+            WhenOnePlayerLeft();
+        }
+        if (CountAmountInList(playersAlive,true) == 0)
+        {
+            PointlessEndRound();
+        }
     }
 }

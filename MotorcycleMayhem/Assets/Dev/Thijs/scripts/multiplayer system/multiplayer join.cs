@@ -81,4 +81,18 @@ public class MultiplayerJoin : MonoBehaviour
             player.gameObject.GetComponent<PlayerDeathSettings>().Reload();
         }
     }
+
+    public void ResetSystem()
+    {
+        foreach (PlayerInput player in activePlayers)
+        {
+            Transform temp = player.transform;
+            while (temp.parent != null)
+            {
+                temp = temp.parent;
+            }
+            Destroy(temp.gameObject);
+        }
+        activePlayers = new List<PlayerInput>();
+    }
 }
