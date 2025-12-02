@@ -12,6 +12,17 @@ public class PlayerDeathSettings : MonoBehaviour
     private Quaternion savedRotation;
     private PositionDetection positionScript;
     private PlayerInput playerInput;
+    private RoundManager roundManager;
+
+    private void Start()
+    {
+        roundManager = FindAnyObjectByType<RoundManager>();
+        if (roundManager == null )
+        {
+            Debug.LogError("Scene has no RoundManager");
+            Destroy(this); return;
+        }
+    }
 
     public void Reload()
     {
@@ -23,6 +34,7 @@ public class PlayerDeathSettings : MonoBehaviour
     {
         isAlive = false;
         positionScript.DecidePlacement(playerInput);
+        roundManager.playersAlive[playerInput.playerIndex] = false;
         Debug.Log($"{gameObject.name} died. Settings saved.");
 
     }

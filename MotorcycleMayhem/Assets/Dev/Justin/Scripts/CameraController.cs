@@ -31,4 +31,18 @@ public class CameraController : MonoBehaviour
             dollySpeed = newSpeed;
         }
     }
+    public void SetDollySpeed(float newSpeed)
+    {
+        var autoDolly = dolly.AutomaticDolly.Method as SplineAutoDolly.FixedSpeed;
+        if (autoDolly != null)
+        {
+
+            autoDolly.Speed = newSpeed / path.CalculateLength();
+            dollySpeed = newSpeed;
+        }
+    }
+    public void SetDollyPositionAlongTrack(float pos)
+    {
+        dolly.CameraPosition = pos;
+    }
 }
