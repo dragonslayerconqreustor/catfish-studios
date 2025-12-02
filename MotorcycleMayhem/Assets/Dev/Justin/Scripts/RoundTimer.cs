@@ -1,5 +1,8 @@
 using System;
 using System.ComponentModel;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,6 +17,7 @@ public class RoundTimer : Util
     private float timer;
     public float timerSpeed = 1f;
     public int displayTime;
+    [SerializeField] TextMeshProUGUI displayText;
     
     private bool timerGoing = false;
     private bool timerPaused = false;
@@ -66,6 +70,10 @@ public class RoundTimer : Util
             if (displayTime < 0)
             {
                 displayTime = 0;
+            }
+            if (displayText != null)
+            {
+                displayText.text = Mathf.Round(displayTime / 60 - 0.5f).ToString() + ":" + displayTime % 60;
             }
         }
     }

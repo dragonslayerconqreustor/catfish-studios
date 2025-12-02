@@ -6,22 +6,18 @@ using UnityEngine.InputSystem;
 public class RespawnPlayers : MonoBehaviour
 {
     private Transform[] respawnLocations;
-    [SerializeField] private float respawnPointDistanceFromGround;
-    public List<GameObject> players = new List<GameObject>();
+    [HideInInspector] public List<GameObject> players = new List<GameObject>();
     private List<Rigidbody> playerRbs = new List<Rigidbody>();
-    [SerializeField] private MultiplayerJoin multiplayerScript;
+    private MultiplayerJoin multiplayerScript;
 
 
     void Start()
     {
+        multiplayerScript = FindAnyObjectByType<MultiplayerJoin>();
         if (multiplayerScript == null)
         {
-            multiplayerScript = FindAnyObjectByType<MultiplayerJoin>();
-            if (multiplayerScript == null)
-            {
-                Debug.LogError("Scene has no MultiplayerJoin");
-                Destroy(this); return;
-            }
+            Debug.LogError("Scene has no MultiplayerJoin");
+            Destroy(this); return;
         }
 
         respawnLocations = FindFirstObjectByType<SpawnPoints>().spawnPoints;
@@ -57,15 +53,6 @@ public class RespawnPlayers : MonoBehaviour
         if (multiplayerScript.activePlayers.Count > playerRbs.Count)
         {
             playerRbs.Add(multiplayerScript.activePlayers[multiplayerScript.activePlayers.Count - 1].gameObject.GetComponent<Rigidbody>());
-        }
-
-        foreach (Transform point in respawnLocations)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(point.transform.position, new Vector3(0, -1, 0), out hit, respawnPointDistanceFromGround))
-            {
-                point.transform.position += new Vector3(0, respawnPointDistanceFromGround - hit.distance, 0);
-            }
         }
     }
 }

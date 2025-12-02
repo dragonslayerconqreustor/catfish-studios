@@ -15,20 +15,18 @@ public class PositionDetection : Util
         -1,
     };
 
-    [SerializeField] private MultiplayerJoin multiplayerScript;
+    private MultiplayerJoin multiplayerScript;
     private List<int> activePLayerIndexes = new List<int>();
 
     void Start()
     {
         Application.targetFrameRate = 120;
-        if (multiplayerScript == null)
+
+        multiplayerScript = FindAnyObjectByType<MultiplayerJoin>();
+        if (multiplayerScript == null )
         {
-            multiplayerScript = FindAnyObjectByType<MultiplayerJoin>();
-            if (multiplayerScript == null )
-            {
-                Debug.LogError("Scene has no MultiplayerJoin");
-                Destroy(this); return;
-            }
+            Debug.LogError("Scene has no MultiplayerJoin");
+            Destroy(this); return;
         }
 
         foreach (PlayerInput player in multiplayerScript.activePlayers)

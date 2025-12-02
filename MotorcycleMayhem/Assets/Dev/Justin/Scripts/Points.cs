@@ -4,7 +4,7 @@ using UnityEngine;
 public class Points : MonoBehaviour
 {
     [SerializeField] private PositionDetection positionScript;
-    [SerializeField] private MultiplayerJoin multiplayerScript;
+    private MultiplayerJoin multiplayerScript;
 
     public int[] pointDistrubition =
     {
@@ -27,14 +27,11 @@ public class Points : MonoBehaviour
 
     void Start()
     {
+        positionScript = FindFirstObjectByType<PositionDetection>();
         if (positionScript == null)
         {
-            positionScript = FindFirstObjectByType<PositionDetection>();
-            if (positionScript == null)
-            {
-                Debug.LogError("Scene has no PositionDetection");
-                Destroy(this); return;
-            }
+            Debug.LogError("Scene has no PositionDetection");
+            Destroy(this); return;
         }
 
         if (multiplayerScript == null)

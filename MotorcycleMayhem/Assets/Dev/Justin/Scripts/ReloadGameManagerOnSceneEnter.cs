@@ -4,12 +4,18 @@ using UnityEngine;
 public class ReloadGameManagerOnSceneEnter : MonoBehaviour
 {
     [SerializeField] bool CanJoinInScene;
+    [SerializeField] bool FullReset;
+
     private void Start()
     {
         MultiplayerJoin temp = FindAnyObjectByType<MultiplayerJoin>();
         if (temp != null)
         {
-            FindAnyObjectByType<MultiplayerJoin>().Reload(CanJoinInScene);
+            temp.Reload(CanJoinInScene);
+            if (FullReset)
+            {
+                temp.ResetSystem();
+            }
         }
         else
         {
