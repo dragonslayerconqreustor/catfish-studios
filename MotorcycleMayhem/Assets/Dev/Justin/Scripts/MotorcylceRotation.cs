@@ -33,7 +33,7 @@ public class MotorcylceRotation : MonoBehaviour
         while (true)
         {
             float value = actionRotation.ReadValue<float>();
-            rotationAccelVector = new Vector3(0, 0, -rotationAcceleration * value);
+            rotationAccelVector = new Vector3(0, 0, rotationAcceleration * value);
             if (value == 0)
             {
                 rb.angularDamping = 10;
