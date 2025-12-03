@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -33,10 +34,6 @@ public class RoundManager : Util
 
     public void Start()
     {
-        for (int i = 0; i < players.Count; i++)
-        {
-            playersAlive.Add(true);
-        }
         multiplayerScript = FindAnyObjectByType<MultiplayerJoin>();
         if (multiplayerScript == null )
         {
@@ -44,6 +41,14 @@ public class RoundManager : Util
             Destroy(this); return;
         }
         StartGame();
+        foreach (PlayerInput player in multiplayerScript.activePlayers)
+        {
+            players.Add(player.gameObject);
+        }
+        for (int i = 0; i < players.Count; i++)
+        {
+            playersAlive.Add(true);
+        }
     }
 
     public void StartRound()
@@ -75,6 +80,7 @@ public class RoundManager : Util
 
     public void EndGame()
     {
+        Debug.Log("Please");
         OnGameEnd.Invoke();
     }
 
@@ -94,8 +100,9 @@ public class RoundManager : Util
         {
             WhenOnePlayerLeft();
         }
-        if (CountAmountInList(playersAlive,true) == 0)
+        if (CountAmountInList(playersAlive, true) == 0)
         {
+            Debug.Log("Why");
             PointlessEndRound();
         }
     }

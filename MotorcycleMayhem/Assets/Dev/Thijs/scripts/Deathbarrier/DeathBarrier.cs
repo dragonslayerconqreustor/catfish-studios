@@ -35,7 +35,7 @@ public class DeathBarrier : MonoBehaviour
          
             YouDied.Add(playerObj);
 
-            playerObj.transform.position += new Vector3(0, -1000, 0);
+            playerObj.transform.position += new Vector3(0, -50, 0);
             playerObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
             Debug.Log($"Player {playerObj.name} disabled and added to array. Total disabled: {YouDied.Count}");

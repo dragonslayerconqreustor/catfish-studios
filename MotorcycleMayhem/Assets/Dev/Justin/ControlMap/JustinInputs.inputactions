@@ -137,7 +137,7 @@
                 {
                     "name": "negative",
                     "id": "3d68b1f9-9027-40ee-8af7-a225217dcad4",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller",
@@ -148,40 +148,7 @@
                 {
                     "name": "positive",
                     "id": "927208cf-203d-4ae2-85d7-0b708ec0132f",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Controller",
-                    "action": "Rotation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "6f191c8c-eec2-426f-9026-4b03ab026821",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotation",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "3dc32c61-f709-42e5-b85b-5a5f591d6eed",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Controller",
-                    "action": "Rotation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "be2fccd7-d576-49e0-bcdb-7f3c1014221d",
-                    "path": "",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller",
