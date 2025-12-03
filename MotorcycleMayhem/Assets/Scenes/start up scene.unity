@@ -327,9 +327,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 501460895
-  m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: -332234088, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -417,9 +417,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: -729472742, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 477241274}
   m_Layer: 5
   m_Name: RawImage
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,7 +457,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477241272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6732847, y: 0.6732847, z: 0.6732847}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 2100000, guid: 18ba9f7584c0e7b49b030a9e89c85d0e, type: 2}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -502,7 +502,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477241272}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &703178246
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,9 +625,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: -407329134, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -697,7 +697,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -913,9 +913,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1157189106}
   - component: {fileID: 1157189107}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spritesheetv2_1
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,9 +979,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 8
   m_Sprite: {fileID: 1703302133, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1147,9 +1147,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1267380346}
   - component: {fileID: 1267380347}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spritesheetv2_2 (2)
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1213,9 +1213,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 32
   m_Sprite: {fileID: 302983281, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -1303,9 +1303,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: -1785975366, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1327,9 +1327,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1441089339}
   - component: {fileID: 1441089340}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spritesheetv2_2 (3)
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1393,9 +1393,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 34
   m_Sprite: {fileID: 302983281, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1628,9 +1628,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1670925819}
   - component: {fileID: 1670925820}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spritesheetv2_4
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1694,9 +1694,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: -1785975366, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1718,9 +1718,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1837110143}
   - component: {fileID: 1837110144}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spritesheetv2_2
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1784,9 +1784,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: 302983281, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1883,9 +1883,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1939303438}
   - component: {fileID: 1939303439}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spritesheetv2_2 (1)
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1949,9 +1949,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: 302983281, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -2068,7 +2068,7 @@ GameObject:
   - component: {fileID: 2004811891}
   m_Layer: 5
   m_Name: Alleen de linker berg lol_0
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2132,9 +2132,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: -336740680, guid: ab9c9329d4b5fc542896c106c3b60360, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2156,9 +2156,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2054915583}
   - component: {fileID: 2054915584}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spritesheetv2_2 (4)
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2222,9 +2222,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1356340351
+  m_SortingLayer: 2
+  m_SortingOrder: 48
   m_Sprite: {fileID: 302983281, guid: 4cc1ed97826bcb849a10e372384e1568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
