@@ -22,7 +22,7 @@ public class Points : MonoBehaviour
         15
     };
 
-    [SerializeField] private TextMeshPro[] leaderboardText;
+    [SerializeField] private TextMeshProUGUI[] leaderboardText;
     [SerializeField] private GameObject leaderboard;
 
     void Start()
