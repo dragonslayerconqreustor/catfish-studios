@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1322245159182496983, guid: 9436aa13b369d2d41891bfee1d9f6eb9, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2516609131796833829, guid: 9436aa13b369d2d41891bfee1d9f6eb9, type: 3}
       propertyPath: m_Layer
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2516609131796833829, guid: 9436aa13b369d2d41891bfee1d9f6eb9, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4167280743394806330, guid: 9436aa13b369d2d41891bfee1d9f6eb9, type: 3}
       propertyPath: m_ConstrainProportionsScale

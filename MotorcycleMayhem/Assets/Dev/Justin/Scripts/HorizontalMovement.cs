@@ -64,8 +64,6 @@ public class HorizontalMovement : MonoBehaviour
                     {
                         rb.AddTorque(accel * slowAcceleration, ForceMode.Acceleration);
                     }
-                print(((WheelsRb[1].angularVelocity.x + WheelsRb[1].angularVelocity.y + WheelsRb[1].angularVelocity.z) + (WheelsRb[0].angularVelocity.x + WheelsRb[0].angularVelocity.y + WheelsRb[0].angularVelocity.z)) / 2);
-                print(playerRb.linearVelocity.x + playerRb.linearVelocity.z);
                 }
             }
         }
