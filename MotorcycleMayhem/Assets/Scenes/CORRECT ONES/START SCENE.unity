@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f694c7d19062df4ea9d1f51c49c931a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchScenes
-  scene: JoiningMenu
+  scene: prototype scene
 --- !u!114 &1180559961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,8 +1275,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
