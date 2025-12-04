@@ -21,8 +21,14 @@ public class HorizontalMovement : MonoBehaviour
     [SerializeField] private float brakingPower;
     private bool handbrakeInitiated = false;
 
+    [SerializeField] private CameraController cameraController;
+    [SerializeField] private float cameraDollySpeed = 5;
+
     void Start()
     {
+        cameraController = FindFirstObjectByType<CameraController>();
+        cameraController.UpdateDollySpeed(cameraDollySpeed);
+
         actionAccelleration = input.actions.FindAction("Accelleration");
         actionHandbrake = input.actions.FindAction("Stop");
         readDelayTime = new WaitForSecondsRealtime(readDelay);

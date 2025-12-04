@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Dev/Justin/Scenes/JustinPlayerJoin.unity
     guid: 9b4bcdeeb8c6c424985057004aeda5bd
   - enabled: 1
-    path: Assets/Scenes/prototype scene.unity
+    path: Assets/Scenes/CORRECT ONES/MAIN SCENE.unity
     guid: baa78a6a3e26edd47b83de5db31b04e7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f1c360d759da83348b3c14b3a3337d7a, type: 2}

@@ -13,7 +13,8 @@ public class CameraController : MonoBehaviour
     private void Awake()
     {
         dolly = FindAnyObjectByType<CinemachineSplineDolly>();
-        UpdateDollySpeed(dollySpeed);
+        //UpdateDollySpeed(dollySpeed);
+        UpdateDollySpeed(0f);
     }
 
     public void UpdateDollySpeed(float newSpeed, bool addToSpeed = false)

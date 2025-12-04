@@ -34,7 +34,10 @@ public class PlayerDeathSettings : MonoBehaviour
     {
         isAlive = false;
         positionScript.DecidePlacement(playerInput);
+        if (roundManager != null)
+        {
         roundManager.playersAlive[playerInput.playerIndex] = false;
+        }
         Debug.Log($"{gameObject.name} died. Settings saved.");
 
     }
