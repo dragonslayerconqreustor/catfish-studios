@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/start up scene.unity
+    path: Assets/Scenes/CORRECT ONES/START SCENE.unity
     guid: ec2c1224df49c9d428a2ec9df4fc7810
-  - enabled: 1
+  - enabled: 0
     path: Assets/Dev/Justin/Scenes/JustinTesting.unity
     guid: 28a10889b2f41cc4c9b547ac223ee6fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Dev/Justin/Scenes/StartingMenu.unity
     guid: 22f8bfc8fa2d9eb469895c59beda9d42
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/JoiningMenu.unity
     guid: 43eebb26ffe641042bd10943a7ae9494
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/prototype scene 1.unity
     guid: 3392db2e1bf1fa5468790bda72976e25
-  - enabled: 1
+  - enabled: 0
     path: Assets/Dev/Justin/Scenes/JustinPlayerJoin.unity
     guid: 9b4bcdeeb8c6c424985057004aeda5bd
   - enabled: 1
